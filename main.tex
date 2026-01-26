@@ -76,9 +76,11 @@
 \begin{frame}{Overview}
 	\begin{itemize}
 		\item Tecnologie quantistiche
-		\item Protocollo di ranging
+		\item LiDAR
 		\item Spontaneous Parametric Down Conversion
-		\item Setup sperimentale
+		\item Quantum Target Detection \& Ranging
+		\item Misure Phase-Insensitive
+		\item Setup sperimentale \& Analisi dati
 		\item Risultati
 		\item Conclusioni e passi successivi
 	\end{itemize}
@@ -103,22 +105,29 @@
 \end{itemize}
 \column{0.6\textwidth}
 \begin{tikzpicture}
-      % immagine "base"
-  \node (A) {\includegraphics[width=0.5\textwidth]{immagini/ComputerQuantistico.jpg}};
+	%   (orizzontale,verticale)
+	%   +: destra, alto       -: sinistra, basso
+	% ogni nodo si trova più avanti rispetto a quelli precedenti
+	\node (A) at (2,0)
+	{\includegraphics[width=0.48\textwidth]{immagini/ComputerQuantistico.jpg}};
+	
+	
+	\node (B) at (0.6,2.2)
+	{\includegraphics[width=0.40\textwidth]{immagini/QKD.jpg.jpg}};
+	
+	
+	\node (C) at (3.4,-2.2)
+	{\includegraphics[width=0.45\textwidth]{immagini/QuantumCommunication.png}};
+	
+	
+	\node (D) at (3.6,2)
+	{\includegraphics[width=0.42\textwidth]{immagini/QuantumGhostImaging.jpg}};
 
-  % immagini sovrapposte (spostate e sopra/sotto in base all'ordine)
-  \node[above right=-6mm and -10mm of A] (B)
-    {\includegraphics[width=0.5\textwidth]{immagini/QuantumMetrology.jpg}};
-
-  \node[below right=-8mm and -6mm of A] (C)
-    {\includegraphics[width=0.5\textwidth]{immagini/QuantumGhostImaging.jpg}};
-
-  % questa la forzo "davanti" usando z-order (disegnandola per ultima) oppure:
-  \node[above =-2mm of A] (D)
-    {\includegraphics[width=0.5\textwidth]{immagini/QKD.jpg.jpg}};
-  \node[below right=-7mm and -30mm of A] (E)
-  	{\includegraphics[width=0.5\textwidth]{immagini/QuantumCommunication.png}};
+	
+	\node (E) at (0,-2.2)
+	{\includegraphics[width=0.48\textwidth]{immagini/QuantumMetrology.jpg}};
 \end{tikzpicture}
+
 \end{columns}
 
 \end{frame}
@@ -139,94 +148,52 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 
 \end{frame}
 
-%=======================================
-\begin{frame}{Quantum LiDAR}
-\begin{columns}
-	\column{0.5\textwidth}
-	Regime sotto studio:
-	\begin{itemize}
-		\item segnale basso ($\mu_0 \ll 1$)
-		\item riflettività del target bassa ($k \ll 1$)
-		\item background alto ($\mu_B \gg 1$)
-	\end{itemize}
-	$\rightarrow $ Situazione ostile
-	\column{0.5\textwidth}
-	\textbf{Obiettivo:} ridurre la probabilità di errore $p_{err} $ in
-	\begin{itemize}
-		\item \textit{Detection:} target presente o assente
-		\item \textit{Ranging:} in quale time-bin è arrivato il ritorno
-	\end{itemize}
-\end{columns}
-\vspace{1.5cm}		
-
-\makebox[\textwidth][c]{%
-\begin{tikzpicture}[scale=0.55]
-	% blocchi
-	\node[draw, rounded corners, minimum width=2.6cm, minimum height=0.9cm] (src) {Probe};
-	\node[draw, rounded corners, minimum width=2.6cm, minimum height=0.9cm, right=1.3cm of src] (tgt) {Target + noise};
-	\node[draw, rounded corners, minimum width=2.6cm, minimum height=0.9cm, right=1.3cm of tgt] (rx) {Receiver};
-	
-	% frecce
-	\draw[->, thick] (src) -- (tgt);
-	\draw[->, thick] (tgt) -- (rx);
-	
-
-	
-
-\end{tikzpicture}%
-}
-
-
-\end{frame}
 
 %==================================
 
 \begin{frame}{SPDC}
-	\begin{columns}
-		\column{0.5\textwidth}
-		Spontaneous Parametric Down Conversion (SPDC):	\\
-		\vspace{0.8cm}	
-		{
-			\centering
-			\includegraphics[width=0.6\textwidth]{immagini/SPDCwikipedia.png}
-			\par
-		}
-		\column{0.5\textwidth}
-		{%
-			\centering
-			\includegraphics[width=1\textwidth]{immagini/diagramSPDC.png}
-			\par
-		}
-		\vspace{0.5cm}	
-		{
-			\centering
-			\includegraphics[width=0.6\textwidth]{immagini/consImpulsoSPDC.png}
-			\par
-		}
-	\end{columns}
+Spontaneous Parametric Down Conversion (SPDC):
+
+\begin{tikzpicture}
+	%   (orizzontale,verticale)
+%   +: destra, alto       -: sinistra, basso
+% ogni nodo si trova più avanti rispetto a quelli precedenti
+\node (A) at (-2.6,0)
+{\includegraphics[width=0.65\textwidth]{immagini/diagramSPDC.png}};
+
+
+\node (A) at (5.2,+1.2)
+{\includegraphics[width=0.31\textwidth]{immagini/SPDCwikipedia.png}};
+
+
+
+\node (C) at (5.2,-1.2)
+{\includegraphics[width=0.31\textwidth]{immagini/consImpulsoSPDC.png}};
+\end{tikzpicture}
 	
 	
 	
-	$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ $signal$ e $idler$ creati nello stesso momento.
-	
+$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
+
 	
 \end{frame}
 
 %=======================================
 
 \begin{frame}{Quantum Target Detection (QTD)}
-	
+
 	\begin{columns}[T]
 		\column{0.55\textwidth}
-		
+		Vantaggio in situazione ostile: 
 		\begin{itemize}
-			\item \textbf{Probe:} stato $\rho_T$ con numero medio di fotoni $\mu_0$
-			\item \textbf{Background:} stato $\rho_B$ con numero medio $\mu_B$
+			\item \textbf{Probe:} stato $\rho_T$ con numero medio di fotoni $\mu_0 \ll 1$
+			\item \textbf{Background:} stato $\rho_B$ con numero medio $\mu_B \gg 1$
 			\item \textbf{Target:} riflettività $k \ll 1$
-			\item \textbf{Canale:} $\rho_k=\mathcal{E}_{k,\mu_B}(\rho_T)$
 		\end{itemize}
 				
 		\vspace{0.25cm}
+		AAAAAAAAAAAAHHHHH QUANTUM ILLUMINATIONNN!!!!!
+		Target modellizzato da canale rumoroso e con perdite: $\rho_k=\mathcal{E}_{k,\mu_B}(\rho_T)$\\
 		\textcolor{red}{Binary hypothesis testing:}
 		\begin{center}
 			\begin{tikzpicture}
@@ -243,7 +210,7 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 		
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{immagini/DisegninoDetection.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetection.png}
 		
 	\end{columns}
 	
@@ -255,14 +222,12 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 	\begin{columns}[T]
 		\column{0.55\textwidth}
 		Misura eseguita con stato a multi-copia $\rho_T^{\otimes L}$.\\
-		Il canale $\mathcal{E}_{k,\mu_B}$ agisce indipendentemente su ogni copia.\\
+		Canale $\mathcal{E}_{k,\mu_B}$ agisce indipendentemente su ogni copia.\\
 		Per $L\to\infty$ vale il \textbf{Quantum Chernoff Bound} (QCB):
 		\begin{equation*}
 			p_{err}(\rho_0^{\otimes L},\rho_1^{\otimes L})
 			\le \frac{1}{2}e^{-\xi_{QCB}L}
 		\end{equation*}
-		
-		%\vspace{0.15cm}
 		Con:
 		\begin{equation*}
 			\begin{aligned}
@@ -272,14 +237,35 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 				&:= -\log\!\big(\mathrm{Tr}[\rho_0^{\alpha}\rho_1^{1-\alpha}]\big)
 			\end{aligned}
 		\end{equation*}
-		
+		 $\xi_{QCB}$ = Chernoff information, $C_\alpha$ = $\alpha$-information.
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{immagini/DisegninoDetectionTensorL.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionTensorL.png}
 	\end{columns}
 	
-%	\vspace{0.1cm}
-	 $\xi_{QCB}$ = Chernoff information, $C_\alpha$ = $\alpha$-information.
+
+	
+\end{frame}
+
+
+%==========================================
+
+\begin{frame}{Quantum Target Detection (QTD)}
+	\begin{columns}[T]
+		\column{0.55\textwidth}
+		Con entangled ancilla mode si raggiunge un quantum advantage di \textbf{6 dB}.\\
+		\vspace{0.3cm}
+		Problemi del QTD:
+		\begin{itemize}
+			\item 6 dB solo per apparati estremamente complessi
+			\item storage dell'idler richiede quantum memories
+		\end{itemize}
+		\column{0.45\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionTensorL.png}
+	\end{columns}
+	
+
 	
 \end{frame}
 
@@ -469,23 +455,25 @@ La best ranging performance è proporzionale a un set di distribuzioni di probab
 
 %============================================
 
-\begin{frame}{Analisi dei dati}
-I conteggi dei dati vengono salvati in delle stringhe in base al tempo di arrivo.\\
+\begin{frame}{Analisi dati}
+I conteggi degli SNSPD vengono salvati in stringhe in base al tempo di arrivo.\\
 \vspace{0.35cm}
 {
 \centering
 \includegraphics[width=1\textwidth]{immagini/StringsCorrelationPicture.png}
 \par}
-Le stringhe vengono shiftate fino a trovare la posizione con il maggior coefficiente di Pearson, $C = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$.
+Le stringhe vengono shiftate fino a trovare il picco del coefficiente di Pearson, $C = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$.
 
 \end{frame}
 
 %============================================
 
-\begin{frame}{Analisi dei dati}
-Viene prima individuato il picco senza rumore, poi si aggiunge il rumore dopo.\\
-\vspace{0.25cm}
-
+\begin{frame}{Analisi dati}
+Il picco è inizialmente individuato quando il rumore è assente.\\
+La posizione individuata è la posizione vera del picco.\\
+\begin{equation*}
+	p_{err, \ exp} = \frac{1-err}{total}
+\end{equation*}
 \begin{columns}
     \column{0.33\textwidth}
     \centering
@@ -514,10 +502,16 @@ Viene prima individuato il picco senza rumore, poi si aggiunge il rumore dopo.\\
 % ===========================================
 
 \begin{frame}{Risultati}
-    
+	
+    \includegraphics[width=0.3\textwidth]{immagini/QCher_VS_muB_16-01-26_QvsC.png}
+    \includegraphics[width=0.3\textwidth]{immagini/errProb_VS_muB_16-01-26_QvsC.png}
 \end{frame}
 
 % ===== SLIDE  =====
+\begin{frame}{Passi successivi}
+	DA SCRIVERE
+\end{frame}
+%============================================
 
 \begin{frame}[plain]
   \vfill
@@ -526,6 +520,9 @@ Viene prima individuato il picco senza rumore, poi si aggiunge il rumore dopo.\\
   \vfill
 \end{frame}
 
+%============================================
+%============================================
+%============================================
 %============================================
 
 \begin{frame}{SPDC}
@@ -746,5 +743,29 @@ Dove  $\vec{P} = \vec{P} ^L + \vec{P} ^{NL}$ e  $  \vec{P}^{NL}_i = \epsilon _0 
 \end{frame}
 
 %==========================================
+%=======================================
+\begin{frame}{Quantum LiDAR}
+	\begin{columns}
+		\column{0.5\textwidth}
+		Regime sotto studio:
+		\begin{itemize}
+			\item segnale basso ($\mu_0 \ll 1$)
+			\item riflettività del target bassa ($k \ll 1$)
+			\item background alto ($\mu_B \gg 1$)
+		\end{itemize}
+		$\rightarrow $ Situazione ostile
+		\column{0.5\textwidth}
+		\textbf{Obiettivo:} ridurre la probabilità di errore $p_{err} $ in
+		\begin{itemize}
+			\item \textit{Detection:} target presente o assente
+			\item \textit{Ranging:} in quale time-bin è arrivato il ritorno
+		\end{itemize}
+	\end{columns}		
+	
+	
+	
+	
+\end{frame}
+
 
 \end{document}
