@@ -19,6 +19,9 @@
 \setbeamertemplate{footline}{
 	\hfill\insertframenumber\hspace{0.4cm}\vspace{0.2cm}
 }
+\setbeamertemplate{caption}{\insertcaption}
+\setbeamertemplate{caption label separator}{}
+
 
 
 % Titolo molto a sinistra
@@ -204,7 +207,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 		Protocollo: \textbf{Quantum Illumination}\\
 		Vantaggio in situazione ostile: 
 		\begin{itemize}
-			\item Probe: stato $\rho_T$, numero medio di fotoni $\mu_0 \ll 1$
+			\item Probe: stato $\rho_T$, numero medio di fotoni $\mu_0 \ll 1$ (fotoni/bin)
 			\item Background: stato $\rho_B$, numero medio di fotoni $\mu_B \gg 1$
 			\item Target: riflettività $k \ll 1$
 		\end{itemize}
@@ -228,7 +231,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 		
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[width=1\textwidth]{immagini/DisegninoDetection.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 		
 	\end{columns}
 	
@@ -258,7 +261,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 		 $\xi_{QCB}$ = Chernoff information, \\ $C_\alpha$ = $\alpha$-information.
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionTensorL.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 	\end{columns}
 	
 
@@ -301,7 +304,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 	
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionTensorL.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 	\end{columns}
 	
 
@@ -315,7 +318,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 	\begin{columns}[T]
 		\column{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{immagini/DisegninoRanging.png}
+		\includegraphics[width=0.95\textwidth]{immagini/DisegninoRangingPresentazione.png}
 		
 		\column{0.52\textwidth}
 		Ranging = stima del tempo di volo.\\
@@ -361,7 +364,7 @@ $\rho_j$ è lo stato con target + rumore.
 	
 	\column{0.48\textwidth}
 	\centering
-	\includegraphics[width=0.95\textwidth]{immagini/DisegninoRanging.png}
+	\includegraphics[width=0.95\textwidth]{immagini/DisegninoRangingPresentazione.png}
 	
 	\column{0.52\textwidth}
 	Per $L \gg 1, \ 	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}$
@@ -455,6 +458,20 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 	
 \end{frame}
 
+
+%============================================
+
+\begin{frame}{Setup sperimentale}
+	\textbf{Classico}
+	{
+		\centering
+		\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}
+		\par
+	}
+	\vspace{0.25cm}
+	{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon detector}
+\end{frame}
+
 %==========================================
 
 \begin{frame}{Setup sperimentale}
@@ -469,23 +486,38 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 
 \end{frame}
 
-%============================================
+
+%==========================================
 
 \begin{frame}{Setup sperimentale}
-\textbf{Classico}
-{
-\centering
-\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}
-\par
-}
-\vspace{0.25cm}
-{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon detector}
+	\begin{tikzpicture}
+		%   (orizzontale,verticale)
+		%   +: destra, alto       -: sinistra, basso
+		% ogni nodo si trova più avanti rispetto a quelli precedenti
+		\node (A) at (0,0.5)
+		{\includegraphics[width=1\textwidth]{immagini/SchemaSetupQuantistico.png}};
+		
+		\pause
+		\node (B) at (-4.2,1)
+		{\includegraphics[width=0.45\textwidth]{immagini/FotoSetupSinistra.jpeg}};
+		
+		
+		\node (C) at (0,1.1)
+		{\includegraphics[width=0.45\textwidth]{immagini/FotoSetupDestra.jpeg}};
+		
+		
+		\node (D) at (5.2,1.2)
+		{\includegraphics[width=0.3\textwidth]{immagini/FotoSNSPD.jpeg}};
+		
+	\end{tikzpicture}
+
+
 \end{frame}
 
 %============================================
 
 \begin{frame}{Analisi dati}
-I conteggi degli SNSPD vengono salvati in stringhe in base al tempo di arrivo.\\
+SNSPD salvano il tempo di arrivo dei fotoni inserendolo .\\
 \vspace{0.35cm}
 {
 \centering
@@ -498,35 +530,46 @@ Le stringhe vengono shiftate fino a trovare il picco del coefficiente di Pearson
 %============================================
 
 \begin{frame}{Analisi dati}
-Il picco è inizialmente individuato quando il rumore è assente.\\
-La posizione individuata è la posizione vera del picco.\\
-\begin{equation*}
-	p_{err, \ exp} = \frac{1-err}{total}
-\end{equation*}
-\begin{columns}
-    \column{0.33\textwidth}
-    \centering
-    \begin{figure}
-        \includegraphics[width=1\textwidth]{immagini/piccoSenzaNoise.png}
-        \caption{\footnotesize Picco senza rumore}
-    \end{figure}
-
-    \column{0.33\textwidth}
-    \centering
-    \begin{figure}
-        \includegraphics[width=1\textwidth]{immagini/piccoConNoise.png}
-        \caption{\footnotesize Picco con rumore}
-    \end{figure}
-
-    \column{0.33\textwidth}
-    \centering
-    \begin{figure}
-        \includegraphics[width=1\textwidth]{immagini/piccoConTantoNoise.png}
-        \caption{\footnotesize Picco con tanto rumore}
-    \end{figure}
-\end{columns}
-
+	
+	Picco inizialmente individuato in assenza di rumore.\\
+	La posizione individuata è la differenza di tempo fra $signal$ e $idler$.\\
+	
+	\begin{columns}
+		
+		% --- Prima immagine
+		\column{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{immagini/piccoSenzaNoise.png}
+		
+		{\footnotesize $\mu_B \sim 10^{-9}$}
+		
+		% --- Seconda immagine
+		\column{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{immagini/piccoConNoise.png}
+		
+		{\footnotesize $\mu_B \sim 10^{-6}$}
+		
+		% --- Terza immagine
+		\column{0.33\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{immagini/piccoConTantoNoise.png}
+		
+		{\footnotesize $\mu_B \sim 10^{-4}$}
+		
+	\end{columns}
+	
+	\vspace{0.3cm}
+	
+	All'aumentare del rumore, individuare il picco è sempre più difficile.\\
+	$\rightarrow$ su $N$ misure, $\# err$ trovano un picco diverso:
+	
+	\[
+	p_{err,\mathrm{exp}} = \frac{N-\# err}{N}
+	\]
+	
 \end{frame}
+
 
 % ===========================================
 
@@ -553,7 +596,7 @@ La posizione individuata è la posizione vera del picco.\\
 %============================================
 %============================================
 %============================================
-
+\iffalse
 \begin{frame}{SPDC}
 
 Equazione di Maxwell in un dielettrico:
@@ -796,5 +839,5 @@ Dove  $\vec{P} = \vec{P} ^L + \vec{P} ^{NL}$ e  $  \vec{P}^{NL}_i = \epsilon _0 
 	
 \end{frame}
 
-
+\fi
 \end{document}
