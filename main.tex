@@ -35,6 +35,7 @@
 \setbeamercolor{math text}{fg=black}        % colore nero
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage[most]{tcolorbox}
 \usetikzlibrary{positioning}
 
 
@@ -67,8 +68,13 @@
     \centering
     \includegraphics[width=0.55\textwidth]{immagini/INRIM_logo-629767161.png}
   \end{columns}
+\vspace{0.6cm}
+\begin{tabular}{@{}p{0.45\textwidth} p{0.45\textwidth}@{}}
+	Relatore: Prof. Leonardo Castellani &
+	Co-relatori: Dr. Ivano Ruo Berchera \\
+	& \hspace{2.1cm}Dr. Alessio Avella
+\end{tabular}
 
-  \vfill
 \end{frame}
 
 % ===== SLIDE  =====
@@ -81,8 +87,7 @@
 		\item Quantum Target Detection \& Ranging
 		\item Misure Phase-Insensitive
 		\item Setup sperimentale \& Analisi dati
-		\item Risultati
-		\item Conclusioni e passi successivi
+		\item Passi successivi
 	\end{itemize}
 \end{frame}
 
@@ -98,10 +103,11 @@
     Alcuni esempi:
 \vspace{0.4cm}
 \begin{itemize}
-    \item Comunicazione quantistica
-    \item Computazione quantistica
-    \item Metrologia quantistica
-    \item Quantum imaging \& sensing
+    \item Quantum computation
+    \item Quantum communication
+    \item Quantum simulation
+    \item Quantum metrology \& sensing \\
+     \textcolor{red}{$\rightarrow $ imaging}
 \end{itemize}
 \column{0.6\textwidth}
 \begin{tikzpicture}
@@ -173,8 +179,19 @@ Spontaneous Parametric Down Conversion (SPDC):
 	
 	
 	
-$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
 
+	
+\end{frame}
+
+%==================================
+
+\begin{frame}{SPDC}
+	
+	
+	
+	
+	$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
+	
 	
 \end{frame}
 
@@ -184,16 +201,17 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 
 	\begin{columns}[T]
 		\column{0.55\textwidth}
+		Protocollo: \textbf{Quantum Illumination}\\
 		Vantaggio in situazione ostile: 
 		\begin{itemize}
-			\item \textbf{Probe:} stato $\rho_T$ con numero medio di fotoni $\mu_0 \ll 1$
-			\item \textbf{Background:} stato $\rho_B$ con numero medio $\mu_B \gg 1$
-			\item \textbf{Target:} riflettività $k \ll 1$
+			\item Probe: stato $\rho_T$, numero medio di fotoni $\mu_0 \ll 1$
+			\item Background: stato $\rho_B$, numero medio di fotoni $\mu_B \gg 1$
+			\item Target: riflettività $k \ll 1$
 		\end{itemize}
 				
-		\vspace{0.25cm}
-		AAAAAAAAAAAAHHHHH QUANTUM ILLUMINATIONNN!!!!!
+		\vspace{0.2cm}
 		Target modellizzato da canale rumoroso e con perdite: $\rho_k=\mathcal{E}_{k,\mu_B}(\rho_T)$\\
+		\vspace{0.2cm}
 		\textcolor{red}{Binary hypothesis testing:}
 		\begin{center}
 			\begin{tikzpicture}
@@ -222,7 +240,7 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 	\begin{columns}[T]
 		\column{0.55\textwidth}
 		Misura eseguita con stato a multi-copia $\rho_T^{\otimes L}$.\\
-		Canale $\mathcal{E}_{k,\mu_B}$ agisce indipendentemente su ogni copia.\\
+		$\mathcal{E}_{k,\mu_B}$ agisce indipendentemente su ogni copia.\\
 		Per $L\to\infty$ vale il \textbf{Quantum Chernoff Bound} (QCB):
 		\begin{equation*}
 			p_{err}(\rho_0^{\otimes L},\rho_1^{\otimes L})
@@ -259,7 +277,29 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 		\begin{itemize}
 			\item 6 dB solo per apparati estremamente complessi
 			\item storage dell'idler richiede quantum memories
+			\item c'è vantaggio solo per bassi $SNR$
 		\end{itemize}
+		\begin{tcolorbox}[
+			colback=white,
+			colframe=black,
+			boxrule=0.4pt,
+			arc=2pt,
+			left=1pt,
+			right=1pt,
+			top=2pt,
+			bottom=2pt
+			]
+			{\fontsize{5}{2}\selectfont
+				S. Lloyd, Science 321, 1463 (2008)\\
+				Tan et al., Phys. Rev. Lett. 101, 253601 (2008)\\
+				J. Shapiro, IEEE A\&E Systems Magazine 35, 8 (2020)\\
+				%Lopaeva et al., Phys. Rev. Lett. 110, 153603 (2013)\\
+				Torromé \& Barzanjeh, Prog. Quantum Electron. 93 (2024)\\
+				Sorelli et al., IEEE A\&E Systems Magazine 37 (2021)
+			}
+		\end{tcolorbox}
+	
+	
 		\column{0.45\textwidth}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionTensorL.png}
@@ -280,20 +320,21 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 		
 		\column{0.52\textwidth}
 		Ranging = stima del tempo di volo.\\
-		Asse dei tempi discretizzato in $m$ slot:
+		Asse dei tempi discretizzato in $m$ slot lunghi $\Delta t$:
 		
 		\[
-		\Delta t \ \Rightarrow\  m\ \text{time-bin}
-		\qquad
+		%\Delta t \ \rightarrow\  m\ \text{time-bin}
+		%\qquad
 		\Delta x = c\,\Delta t/2
+		\qquad x = j\Delta x
 		\]
 		
 		
-		\textbf{Problema a $m$ ipotesi:}\\
-		il target può cadere in uno degli $m$ slot.
+		%\textbf{Problema a $m$ ipotesi:}\\
+		il target si trova in uno degli $m$ slot.
 		
 		\vspace{0.2cm}
-		\textcolor{red}{Problema a multi-hypothesis:}
+		\textcolor{red}{Multi-hypothesis testing:}
 		\begin{center}
 			\begin{tikzpicture}
 				\node[draw, inner sep=6pt] {
@@ -309,11 +350,8 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 	
 	\vspace{0.15cm}
 	
-		\[
-		\rho_j := \rho_k^{(j)}\!\!\bigotimes_{i\neq j}^{m-1}\!\rho_B^{(i)}
-		\quad
-		\text{(solo nello slot $j$ c’è target+rumore)}
-		\]
+$\rho_j$ è lo stato con target + rumore.		
+	%	\rho_j := \rho_k^{(j)}\!\!\bigotimes_{i\neq j}^{m-1}\!\rho_B^{(i)}
 \end{frame}
 
 %========================================
@@ -327,10 +365,8 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 	\includegraphics[width=0.95\textwidth]{immagini/DisegninoRanging.png}
 	
 	\column{0.52\textwidth}
-	Per $L \gg 1$ la probabilità di errore decresce esponenzialmente:
-	\[
-	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}
-	\]
+	Per $L \gg 1, \ 	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}$
+	
 
 	\textbf{Asintoticamente} vale:
 	\begin{equation*}
