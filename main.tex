@@ -39,7 +39,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta,positioning}
 
 
 
@@ -149,11 +149,17 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 
 {
 \centering
-\includegraphics[width=0.7\linewidth]{immagini/schemaLIDAR2.png}
+\includegraphics[width=0.6\linewidth]{immagini/schemaLIDAR2.png}
 \par
 }
 \vspace{0.2cm}
-È possibile migliorare il protocollo LiDAR sfruttando correlazioni quantistiche?
+Performance del protocollo misurata con probabilità di errore $p_{err} $ in
+\begin{itemize}
+	\item \textit{Detection:} target presente o assente
+	\item \textit{Ranging:} in quale time-bin è arrivato il ritorno
+\end{itemize}
+\vspace{0.2cm}
+$\rightarrow$ È possibile migliorare il protocollo LiDAR sfruttando correlazioni quantistiche?
 
 \end{frame}
 
@@ -181,7 +187,7 @@ Spontaneous Parametric Down Conversion (SPDC):
 \end{tikzpicture}
 	
 	
-	
+$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
 
 	
 \end{frame}
@@ -190,10 +196,29 @@ Spontaneous Parametric Down Conversion (SPDC):
 
 \begin{frame}{SPDC}
 	
+	SPDC processo poco efficiente $\rightarrow $ Quasi Phase Matching (QPM) :\\
+	cristallo non lineare a poli periodici, $\chi^{(2)}=(-1)^n \chi^{(2)}_0 $.
+	\vspace{0.3cm}
+\begin{columns}
+	\column{0.7\textwidth}
+	{\centering
+		\includegraphics[width=1\textwidth]{immagini/QuasiPhaseMatching.png}
+		\par
+	}
+
+	\column{0.3\textwidth}
+	\[
+	\kappa_{pump} \simeq \kappa_s + \kappa_i + \kappa_{\Lambda}
+	\]
+	\[
+	  \kappa_{\Lambda}=\frac{2\pi}{\Lambda} 	
+	\]
+	
+\end{columns}
+
 	
 	
-	
-	$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
+
 	
 	
 \end{frame}
@@ -229,7 +254,8 @@ Spontaneous Parametric Down Conversion (SPDC):
 		\end{center}
 		
 		
-		\column{0.45\textwidth}
+		\column{0.55\textwidth}
+		\vspace{0.45cm}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 		
@@ -259,7 +285,8 @@ Spontaneous Parametric Down Conversion (SPDC):
 			\end{aligned}
 		\end{equation*}
 		 $\xi_{QCB}$ = Chernoff information, \\ $C_\alpha$ = $\alpha$-information.
-		\column{0.45\textwidth}
+		\column{0.55\textwidth}
+		\vspace{0.45cm}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 	\end{columns}
@@ -302,7 +329,8 @@ Spontaneous Parametric Down Conversion (SPDC):
 		\end{tcolorbox}
 	
 	
-		\column{0.45\textwidth}
+		\column{0.55\textwidth}
+		\vspace{0.45cm}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
 	\end{columns}
@@ -316,11 +344,11 @@ Spontaneous Parametric Down Conversion (SPDC):
 \begin{frame}{Quantum Target Ranging (QTR)}
 	
 	\begin{columns}[T]
-		\column{0.48\textwidth}
+		\column{0.55\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{immagini/DisegninoRangingPresentazione.png}
+		\includegraphics[width=1\textwidth]{immagini/DisegninoRangingPresentazione.png}
 		
-		\column{0.52\textwidth}
+		\column{0.5\textwidth}
 		Ranging = stima del tempo di volo.\\
 		Asse dei tempi discretizzato in $m$ slot lunghi $\Delta t$:
 		
@@ -362,11 +390,11 @@ $\rho_j$ è lo stato con target + rumore.
 	
 \begin{columns}
 	
-	\column{0.48\textwidth}
+	\column{0.55\textwidth}
 	\centering
-	\includegraphics[width=0.95\textwidth]{immagini/DisegninoRangingPresentazione.png}
+	\includegraphics[width=1\textwidth]{immagini/DisegninoRangingPresentazione.png}
 	
-	\column{0.52\textwidth}
+	\column{0.5\textwidth}
 	Per $L \gg 1, \ 	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}$
 	\vspace{0.2cm}
 
@@ -399,9 +427,11 @@ In regime ottico è difficile e poco pratico preservare la fase.\\
 $\rightarrow$ \textbf{Misura phase-insensitive}: si misura solo il numero di fotoni.\\
 
 \vspace{0.25cm}
-	Caso \textbf{quantistico:} $ \rho_Q = \rho_{\mathrm{TMSV}}^{\otimes R}$ \\
-	$\rho_{\mathrm{TMSV}} = (| TMSV \rangle \langle TMSV|)  $\\
-	$|TMSV \rangle=\sum_{n}c_n^{\mu_0}|n,n\rangle_{s.i}\langle n,n| $\\
+	Caso \textbf{quantistico:} 
+	\[
+	 \rho_Q = \rho_{\mathrm{TMSV}}^{\otimes L} \qquad \rho_{\mathrm{TMSV}} = (| TMSV \rangle \langle TMSV|) \qquad |TMSV \rangle=\sum_{n}c_n^{\mu_0}|n,n\rangle_{s.i}\langle n,n|
+	\]
+	
 	Per lo slot $j$ si ha distribuzione di conteggi:
 \[
 P_j(\vec n)=\mathrm{Tr}\!\left[\rho_j\,|\vec n\rangle\langle \vec n|\right],
@@ -463,69 +493,79 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 
 \begin{frame}{Setup sperimentale}
 	\textbf{Classico}
-	{
-		\centering
-		\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}
-		\par
-	}
+\begin{tikzpicture}
+	%   (orizzontale,verticale)
+	%   +: destra, alto       -: sinistra, basso
+	% ogni nodo si trova più avanti rispetto a quelli precedenti
+	\node (A) at (0,0.5)
+	{\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}};
+	
+	
+\end{tikzpicture}
 	\vspace{0.25cm}
-	{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon detector}
+	{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon Detector}
 \end{frame}
 
 %==========================================
 
 \begin{frame}{Setup sperimentale}
 \textbf{Quantistico}
-{
-\centering
-\includegraphics[width=1\textwidth]{immagini/SchemaSetupQuantistico.png}
-\par
-}
+\begin{tikzpicture}[baseline=(A.north)]
+	\node (A) at (0,1.5) {\includegraphics[width=\textwidth]{immagini/SchemaSetupQuantistico.png}};
+	\pause
+	\node (B) at (-4.2,2) {\includegraphics[width=0.45\textwidth]{immagini/FotoSetupSinistra.jpeg}};
+	\node (C) at (0,2.2) {\includegraphics[width=0.45\textwidth]{immagini/FotoSetupDestra.jpeg}};
+	\node (D) at (5.2,2.2) {\includegraphics[width=0.3\textwidth]{immagini/FotoSNSPD.jpeg}};
+\end{tikzpicture}
+
 \vspace{0.25cm}
-{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon detector}
+{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon Detector}
 
 \end{frame}
 
 
 %==========================================
 
-\begin{frame}{Setup sperimentale}
-	\begin{tikzpicture}
-		%   (orizzontale,verticale)
-		%   +: destra, alto       -: sinistra, basso
-		% ogni nodo si trova più avanti rispetto a quelli precedenti
-		\node (A) at (0,0.5)
-		{\includegraphics[width=1\textwidth]{immagini/SchemaSetupQuantistico.png}};
+\begin{frame}{Analisi dati}
+	
+	{\centering
+	
+	% --- Schema TikZ
+	\begin{tikzpicture}[
+		scale=0.9, transform shape,
+		font=\footnotesize,
+		box/.style={draw, rounded corners=2pt,
+			align=center, inner sep=6pt,
+			minimum height=12mm},
+		arrow/.style={-{Stealth[length=2.2mm]}, line width=0.6pt},
+		]
 		
-		\pause
-		\node (B) at (-4.2,1)
-		{\includegraphics[width=0.45\textwidth]{immagini/FotoSetupSinistra.jpeg}};
+		\node[box] (snspd) {SNSPD\\rileva fotone};
+		\node[box, right=18mm of snspd] (tt)
+		{TimeTagger\\segna conteggio\\time-bin:\\$\Delta t = 800\,\mathrm{ps}$};
+		\node[box, right=18mm of tt] (strings)
+		{Creazione\\stringhe\\di conteggi};
 		
+		\draw[arrow] (snspd) -- (tt);
+		\draw[arrow] (tt) -- (strings);
 		
-		\node (C) at (0,1.1)
-		{\includegraphics[width=0.45\textwidth]{immagini/FotoSetupDestra.jpeg}};
-		
-		
-		\node (D) at (5.2,1.2)
-		{\includegraphics[width=0.3\textwidth]{immagini/FotoSNSPD.jpeg}};
 		
 	\end{tikzpicture}
-
-
+	
+	\vspace{0.4cm}
+	
+	% --- Immagine sotto
+	\includegraphics[width=0.7\textwidth]{immagini/StringsCorrelationPicture.png}
+	\par
+}
+	\vspace{0.3cm}
+	
+	Si calcola coefficiente di Pearson $ C_P = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$ shiftando le stringhe per trovare il picco.
+	
 \end{frame}
 
-%============================================
 
-\begin{frame}{Analisi dati}
-SNSPD salvano il tempo di arrivo dei fotoni inserendolo .\\
-\vspace{0.35cm}
-{
-\centering
-\includegraphics[width=1\textwidth]{immagini/StringsCorrelationPicture.png}
-\par}
-Le stringhe vengono shiftate fino a trovare il picco del coefficiente di Pearson, $C = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$.
 
-\end{frame}
 
 %============================================
 
@@ -574,14 +614,94 @@ Le stringhe vengono shiftate fino a trovare il picco del coefficiente di Pearson
 % ===========================================
 
 \begin{frame}{Risultati}
+Si è studiato l'andamento (protocollo quantistico) di $p_{err,\mathrm{exp}}$ e di $\xi_{TR}$ con $\mu_B$.\\
+Parametri:
+\[
+\mu = (9.83 \pm 7)\cdot 10^{-5} \qquad \kappa = (1.74 \pm 0.05)\cdot 10^{-4} \qquad \eta_{idler} = (9.4 \pm 4)\cdot 10^{-4}
+\]
+	\begin{columns}
+		\column{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth]{immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png}
+		
+		\column{0.5\textwidth}
+	    \includegraphics[width=0.9\textwidth]{immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png}
+	\end{columns}
+\vspace{0.2cm}
+
+Differenza risultato sperimentale - teoria dovuta a ...
+
+\end{frame}
+
+% ===========================================
+
+\begin{frame}{Risultati}
+
+	\begin{columns}
+		\column{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth]{immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png}
+		
+		\column{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth]{immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png}
+	\end{columns}
+	\vspace{0.2cm}
+	\begin{columns}
+		\column{0.5\textwidth}
+		Zona esplorata presenta $\mathcal{Q} \simeq 1$:
+		\begin{itemize}
+			\item $\eta_{idler} \ll 1 $
+			\item $\mu \ \text{e} \ \mu_B $ mantenuti bassi per non surriscaldare gli SNSPD
+		\end{itemize}
+		
+		\column{0.5\textwidth}
+		\begin{tcolorbox}[
+			colback=white,
+			colframe=black,
+			boxrule=0.4pt,
+			arc=2pt,
+			left=6pt,
+			right=6pt,
+			top=1pt,
+			bottom=1pt
+			]
+			{\footnotesize
+				\[
+				\vspace{-0.3cm}
+				\mu = (9.83 \pm 7)\cdot 10^{-5}
+				\qquad
+				\mu_B \in [1.49,4.11]\cdot 10^{-4}
+				\vspace{-0.3cm}
+				\]
+				
+				\[
+				\vspace{-0.3cm}
+				\kappa = (1.74 \pm 0.05)\cdot 10^{-4}
+				\ \ 
+				\eta_{idler} = (9.4 \pm 4)\cdot 10^{-4}
+				\vspace{-0.3cm}
+				\]
+			}
+		\end{tcolorbox}
+		
+	\end{columns}
 	
-    \includegraphics[width=0.3\textwidth]{immagini/QCher_VS_muB_16-01-26_QvsC.png}
-    \includegraphics[width=0.3\textwidth]{immagini/errProb_VS_muB_16-01-26_QvsC.png}
+	
+	
 \end{frame}
 
 % ===== SLIDE  =====
 \begin{frame}{Passi successivi}
-	DA SCRIVERE
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item Aumentare $\eta_{idler}$: controllo accoppiamento fibre ed efficienza SNSPD
+		\item Studio teorico a bassi $\mu \ \text{e} \ \mu_B$ per trovare zone ad alto $\mathcal{Q}$
+		\item Misure su protocolli classico e quantistico e confronto
+		\item Covert sensing?
+	\end{itemize}
+
+	\column{0.5\textwidth}
+	\includegraphics[width=0.9\textwidth]{immagini/etaI_vs_CrystalTemp.png}
+\end{columns}
 \end{frame}
 %============================================
 
