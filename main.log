@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.1.10)  29 JAN 2026 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.1.10)  29 JAN 2026 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1148,7 +1148,7 @@ Package pdftex.def Info: immagini/QuantumMetrology.jpg  used on input line 142.
  <./immagini/ComputerQuantistico.jpg> <./immagini/QKD.jpg.jpg> <./immagini/Quan
 tumCommunication.png (PNG copy)> <./immagini/QuantumGhostImaging.jpg> <./immagi
 ni/QuantumMetrology.jpg>]
-<immagini/schemaLIDAR2.png, id=78, 1541.76pt x 805.0075pt>
+<immagini/schemaLIDAR2.png, id=77, 1541.76pt x 805.0075pt>
 File: immagini/schemaLIDAR2.png Graphic file (type png)
 <use immagini/schemaLIDAR2.png>
 Package pdftex.def Info: immagini/schemaLIDAR2.png  used on input line 164.
@@ -1163,266 +1163,240 @@ Overfull \vbox (9.85347pt too high) detected at line 164
 <immagini/diagramSPDC.png, id=88, 1344.02126pt x 502.87875pt>
 File: immagini/diagramSPDC.png Graphic file (type png)
 <use immagini/diagramSPDC.png>
-Package pdftex.def Info: immagini/diagramSPDC.png  used on input line 193.
+Package pdftex.def Info: immagini/diagramSPDC.png  used on input line 194.
 (pdftex.def)             Requested size: 258.91765pt x 96.87543pt.
 <immagini/SPDCwikipedia.png, id=89, 504.88625pt x 350.30875pt>
 File: immagini/SPDCwikipedia.png Graphic file (type png)
 <use immagini/SPDCwikipedia.png>
-Package pdftex.def Info: immagini/SPDCwikipedia.png  used on input line 193.
+Package pdftex.def Info: immagini/SPDCwikipedia.png  used on input line 194.
 (pdftex.def)             Requested size: 123.48398pt x 85.67404pt.
 <immagini/consImpulsoSPDC.png, id=90, 361.35pt x 186.6975pt>
 File: immagini/consImpulsoSPDC.png Graphic file (type png)
 <use immagini/consImpulsoSPDC.png>
-Package pdftex.def Info: immagini/consImpulsoSPDC.png  used on input line 193.
+Package pdftex.def Info: immagini/consImpulsoSPDC.png  used on input line 194.
 (pdftex.def)             Requested size: 123.48398pt x 63.79822pt.
 
-Overfull \hbox (22.09288pt too wide) in paragraph at lines 193--193
+Overfull \hbox (22.09288pt too wide) in paragraph at lines 194--194
 [][]  
+ []
+
+
+Overfull \vbox (4.35013pt too high) detected at line 194
  []
 
 [5
 
  <./immagini/diagramSPDC.png> <./immagini/SPDCwikipedia.png> <./immagini/consIm
 pulsoSPDC.png>]
-<immagini/QuasiPhaseMatching.png, id=99, 1541.76pt x 1027.84pt>
+<immagini/QuasiPhaseMatching.png, id=101, 1541.76pt x 1027.84pt>
 File: immagini/QuasiPhaseMatching.png Graphic file (type png)
 <use immagini/QuasiPhaseMatching.png>
 Package pdftex.def Info: immagini/QuasiPhaseMatching.png  used on input line 22
-4.
+5.
 (pdftex.def)             Requested size: 278.83578pt x 185.88148pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 225.
 
-Overfull \vbox (21.24693pt too high) detected at line 224
+Overfull \vbox (28.24693pt too high) detected at line 225
  []
 
 [6
 
  <./immagini/QuasiPhaseMatching.png>]
-<immagini/DisegninoDetectionPresentazione.png, id=107, 1124.2pt x 747.79375pt>
+<immagini/DisegninoDetectionPresentazione.png, id=110, 1124.2pt x 747.79375pt>
 File: immagini/DisegninoDetectionPresentazione.png Graphic file (type png)
 <use immagini/DisegninoDetectionPresentazione.png>
 Package pdftex.def Info: immagini/DisegninoDetectionPresentazione.png  used on 
-input line 264.
+input line 272.
 (pdftex.def)             Requested size: 219.08743pt x 145.7222pt.
- [7
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 272.
 
- <./immagini/DisegninoDetectionPresentazione.png>]
-File: immagini/DisegninoDetectionPresentazione.png Graphic file (type png)
-<use immagini/DisegninoDetectionPresentazione.png>
-Package pdftex.def Info: immagini/DisegninoDetectionPresentazione.png  used on 
-input line 296.
-(pdftex.def)             Requested size: 219.08743pt x 145.7222pt.
- [8
-
-]
-File: immagini/DisegninoDetectionPresentazione.png Graphic file (type png)
-<use immagini/DisegninoDetectionPresentazione.png>
-Package pdftex.def Info: immagini/DisegninoDetectionPresentazione.png  used on 
-input line 340.
-(pdftex.def)             Requested size: 219.08743pt x 145.7222pt.
-
-Overfull \vbox (6.67181pt too high) detected at line 340
+Overfull \vbox (17.19707pt too high) detected at line 272
  []
 
-[9
+[7
+
+ <./immagini/DisegninoDetectionPresentazione.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 317.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 317.
+File: immagini/DisegninoDetectionPresentazione.png Graphic file (type png)
+<use immagini/DisegninoDetectionPresentazione.png>
+Package pdftex.def Info: immagini/DisegninoDetectionPresentazione.png  used on 
+input line 317.
+(pdftex.def)             Requested size: 219.08743pt x 145.7222pt.
+
+Overfull \vbox (7.63486pt too high) detected at line 317
+ []
+
+[8
 
 ]
-<immagini/DisegninoRangingPresentazione.png, id=129, 1468.48625pt x 910.40125pt
+<immagini/DisegninoRangingPresentazione.png, id=130, 1468.48625pt x 910.40125pt
 >
 File: immagini/DisegninoRangingPresentazione.png Graphic file (type png)
 <use immagini/DisegninoRangingPresentazione.png>
 Package pdftex.def Info: immagini/DisegninoRangingPresentazione.png  used on in
-put line 385.
+put line 362.
 (pdftex.def)             Requested size: 219.08743pt x 135.81804pt.
- [10
+ [9
 
- <./immagini/DisegninoRangingPresentazione.png>]
-File: immagini/DisegninoRangingPresentazione.png Graphic file (type png)
-<use immagini/DisegninoRangingPresentazione.png>
-Package pdftex.def Info: immagini/DisegninoRangingPresentazione.png  used on in
-put line 418.
-(pdftex.def)             Requested size: 219.08743pt x 135.81804pt.
+ <./immagini/DisegninoRangingPresentazione.png>] [10
 
-Overfull \vbox (8.00018pt too high) detected at line 418
+]
+<immagini/QvsMean.png, id=142, 633.94737pt x 475.46053pt>
+File: immagini/QvsMean.png Graphic file (type png)
+<use immagini/QvsMean.png>
+Package pdftex.def Info: immagini/QvsMean.png  used on input line 433.
+(pdftex.def)             Requested size: 219.08743pt x 164.317pt.
+
+Overfull \hbox (19.91814pt too wide) in paragraph at lines 433--433
+ [][] 
  []
 
 [11
 
-] [12
-
-]
-<immagini/QvsKappa.png, id=146, 1011.78pt x 592.2125pt>
-File: immagini/QvsKappa.png Graphic file (type png)
-<use immagini/QvsKappa.png>
-Package pdftex.def Info: immagini/QvsKappa.png  used on input line 489.
-(pdftex.def)             Requested size: 159.33604pt x 93.25587pt.
-<immagini/QvsMean.png, id=147, 633.94737pt x 475.46053pt>
-File: immagini/QvsMean.png Graphic file (type png)
-<use immagini/QvsMean.png>
-Package pdftex.def Info: immagini/QvsMean.png  used on input line 489.
-(pdftex.def)             Requested size: 159.33604pt x 119.50327pt.
-
-Overfull \vbox (8.49577pt too high) detected at line 489
- []
-
-[13
-
- <./immagini/QvsKappa.png> <./immagini/QvsMean.png>]
-<immagini/SchemaSetupClassico.png, id=156, 1923.185pt x 518.93875pt>
-File: immagini/SchemaSetupClassico.png Graphic file (type png)
-<use immagini/SchemaSetupClassico.png>
-Package pdftex.def Info: immagini/SchemaSetupClassico.png  used on input line 5
-07.
-(pdftex.def)             Requested size: 398.3386pt x 107.48378pt.
-
-Overfull \hbox (7.2992pt too wide) in paragraph at lines 507--507
-[] 
- []
-
-[14
-
- <./immagini/SchemaSetupClassico.png>]
-<immagini/SchemaSetupQuantistico.png, id=163, 1924.18875pt x 736.7525pt>
+ <./immagini/QvsMean.png>]
+<immagini/SchemaSetupQuantistico.png, id=149, 1924.18875pt x 736.7525pt>
 File: immagini/SchemaSetupQuantistico.png Graphic file (type png)
 <use immagini/SchemaSetupQuantistico.png>
 Package pdftex.def Info: immagini/SchemaSetupQuantistico.png  used on input lin
-e 524.
+e 451.
 (pdftex.def)             Requested size: 398.3386pt x 152.51917pt.
-<immagini/FotoSetupSinistra.jpeg, id=164, 1606.0pt x 1204.5pt>
+<immagini/FotoSetupSinistra.jpeg, id=150, 1606.0pt x 1204.5pt>
 File: immagini/FotoSetupSinistra.jpeg Graphic file (type jpg)
 <use immagini/FotoSetupSinistra.jpeg>
-Package pdftex.def Info: immagini/FotoSetupSinistra.jpeg  used on input line 52
-4.
+Package pdftex.def Info: immagini/FotoSetupSinistra.jpeg  used on input line 45
+1.
 (pdftex.def)             Requested size: 179.25114pt x 134.42522pt.
-<immagini/FotoSetupDestra.jpeg, id=165, 1606.0pt x 1204.5pt>
+<immagini/FotoSetupDestra.jpeg, id=151, 1606.0pt x 1204.5pt>
 File: immagini/FotoSetupDestra.jpeg Graphic file (type jpg)
 <use immagini/FotoSetupDestra.jpeg>
-Package pdftex.def Info: immagini/FotoSetupDestra.jpeg  used on input line 524.
+Package pdftex.def Info: immagini/FotoSetupDestra.jpeg  used on input line 451.
 
 (pdftex.def)             Requested size: 179.25114pt x 134.42522pt.
-<immagini/FotoSNSPD.jpeg, id=166, 1204.5pt x 1606.0pt>
+<immagini/FotoSNSPD.jpeg, id=152, 1204.5pt x 1606.0pt>
 File: immagini/FotoSNSPD.jpeg Graphic file (type jpg)
 <use immagini/FotoSNSPD.jpeg>
-Package pdftex.def Info: immagini/FotoSNSPD.jpeg  used on input line 524.
+Package pdftex.def Info: immagini/FotoSNSPD.jpeg  used on input line 451.
 (pdftex.def)             Requested size: 119.50279pt x 159.33511pt.
 
-Overfull \hbox (25.79317pt too wide) in paragraph at lines 524--524
-[]  
+Overfull \hbox (25.79317pt too wide) in paragraph at lines 451--451
+[][]  
  []
 
 
-Overfull \vbox (22.95544pt too high) detected at line 524
+Overfull \vbox (7.2263pt too high) detected at line 451
  []
 
-[15
+[12
 
  <./immagini/SchemaSetupQuantistico.png> <./immagini/FotoSetupSinistra.jpeg> <.
 /immagini/FotoSetupDestra.jpeg> <./immagini/FotoSNSPD.jpeg>]
 File: immagini/SchemaSetupQuantistico.png Graphic file (type png)
 <use immagini/SchemaSetupQuantistico.png>
 Package pdftex.def Info: immagini/SchemaSetupQuantistico.png  used on input lin
-e 524.
+e 451.
 (pdftex.def)             Requested size: 398.3386pt x 152.51917pt.
 File: immagini/FotoSetupSinistra.jpeg Graphic file (type jpg)
 <use immagini/FotoSetupSinistra.jpeg>
-Package pdftex.def Info: immagini/FotoSetupSinistra.jpeg  used on input line 52
-4.
+Package pdftex.def Info: immagini/FotoSetupSinistra.jpeg  used on input line 45
+1.
 (pdftex.def)             Requested size: 179.25114pt x 134.42522pt.
 File: immagini/FotoSetupDestra.jpeg Graphic file (type jpg)
 <use immagini/FotoSetupDestra.jpeg>
-Package pdftex.def Info: immagini/FotoSetupDestra.jpeg  used on input line 524.
+Package pdftex.def Info: immagini/FotoSetupDestra.jpeg  used on input line 451.
 
 (pdftex.def)             Requested size: 179.25114pt x 134.42522pt.
 File: immagini/FotoSNSPD.jpeg Graphic file (type jpg)
 <use immagini/FotoSNSPD.jpeg>
-Package pdftex.def Info: immagini/FotoSNSPD.jpeg  used on input line 524.
+Package pdftex.def Info: immagini/FotoSNSPD.jpeg  used on input line 451.
 (pdftex.def)             Requested size: 119.50279pt x 159.33511pt.
 
-Overfull \hbox (25.79317pt too wide) in paragraph at lines 524--524
-[]  
+Overfull \hbox (25.79317pt too wide) in paragraph at lines 451--451
+[][]  
  []
 
 
-Overfull \vbox (22.95544pt too high) detected at line 524
+Overfull \vbox (7.2263pt too high) detected at line 451
  []
 
-[16
+[13
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 565.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 565.
-<immagini/StringsCorrelationPicture.png, id=178, 790.6338pt x 278.4804pt>
+<immagini/StringsCorrelationPicture.png, id=165, 790.6338pt x 278.4804pt>
 File: immagini/StringsCorrelationPicture.png Graphic file (type png)
 <use immagini/StringsCorrelationPicture.png>
 Package pdftex.def Info: immagini/StringsCorrelationPicture.png  used on input 
-line 565.
+line 492.
 (pdftex.def)             Requested size: 278.83578pt x 98.21321pt.
- [17
+ [14
 
  <./immagini/StringsCorrelationPicture.png>]
-<immagini/piccoSenzaNoise.png, id=187, 1162.5796pt x 854.15173pt>
+<immagini/piccoSenzaNoise.png, id=172, 1162.5796pt x 854.15173pt>
 File: immagini/piccoSenzaNoise.png Graphic file (type png)
 <use immagini/piccoSenzaNoise.png>
-Package pdftex.def Info: immagini/piccoSenzaNoise.png  used on input line 611.
+Package pdftex.def Info: immagini/piccoSenzaNoise.png  used on input line 538.
 (pdftex.def)             Requested size: 131.45245pt x 96.57666pt.
-<immagini/piccoConNoise.png, id=188, 1160.87244pt x 870.65433pt>
+<immagini/piccoConNoise.png, id=173, 2047.65pt x 1535.7375pt>
 File: immagini/piccoConNoise.png Graphic file (type png)
 <use immagini/piccoConNoise.png>
-Package pdftex.def Info: immagini/piccoConNoise.png  used on input line 611.
-(pdftex.def)             Requested size: 131.45245pt x 98.58871pt.
-<immagini/piccoConTantoNoise.png, id=189, 462.528pt x 346.896pt>
+Package pdftex.def Info: immagini/piccoConNoise.png  used on input line 538.
+(pdftex.def)             Requested size: 131.45245pt x 98.58446pt.
+<immagini/piccoConTantoNoise.png, id=174, 462.528pt x 346.896pt>
 File: immagini/piccoConTantoNoise.png Graphic file (type png)
 <use immagini/piccoConTantoNoise.png>
-Package pdftex.def Info: immagini/piccoConTantoNoise.png  used on input line 61
-1.
+Package pdftex.def Info: immagini/piccoConTantoNoise.png  used on input line 53
+8.
 (pdftex.def)             Requested size: 131.45245pt x 98.59113pt.
 
-Overfull \vbox (15.33694pt too high) detected at line 611
+Overfull \vbox (0.10777pt too high) detected at line 538
  []
 
-[18
+[15
 
  <./immagini/piccoSenzaNoise.png> <./immagini/piccoConNoise.png> <./immagini/pi
 ccoConTantoNoise.png>]
-<immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png, id=200, 722.7pt x 433.62pt>
+<immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png, id=183, 722.7pt x 433.62pt>
 File: immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png Graphic file (type png)
 <use immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png>
 Package pdftex.def Info: immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png  used
- on input line 633.
+ on input line 561.
 (pdftex.def)             Requested size: 179.25114pt x 107.5512pt.
-<immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png, id=201, 722.7pt x 433.62pt>
+<immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png, id=184, 722.7pt x 433.62pt>
 File: immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png Graphic file (type png)
 <use immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png>
 Package pdftex.def Info: immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png  used o
-n input line 633.
+n input line 561.
 (pdftex.def)             Requested size: 179.25114pt x 107.5512pt.
- [19
+ [16
 
  <./immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png> <./immagini/QCher_VS_muB_
 16-01-26_27Jan_QandC.png>]
 File: immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png Graphic file (type png)
 <use immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png>
 Package pdftex.def Info: immagini/errProb_VS_muB_16-01-26_27Jan_QandC.png  used
- on input line 689.
+ on input line 617.
 (pdftex.def)             Requested size: 179.25114pt x 107.5512pt.
 File: immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png Graphic file (type png)
 <use immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png>
 Package pdftex.def Info: immagini/QCher_VS_muB_16-01-26_27Jan_QandC.png  used o
-n input line 689.
+n input line 617.
 (pdftex.def)             Requested size: 179.25114pt x 107.5512pt.
- [20
+ [17
 
 ]
-<immagini/etaI_vs_CrystalTemp.png, id=215, 722.7pt x 433.62pt>
+<immagini/etaI_vs_CrystalTemp.png, id=197, 722.7pt x 433.62pt>
 File: immagini/etaI_vs_CrystalTemp.png Graphic file (type png)
 <use immagini/etaI_vs_CrystalTemp.png>
-Package pdftex.def Info: immagini/etaI_vs_CrystalTemp.png  used on input line 7
-05.
+Package pdftex.def Info: immagini/etaI_vs_CrystalTemp.png  used on input line 6
+32.
 (pdftex.def)             Requested size: 179.25114pt x 107.5512pt.
- [21
+ [18
 
- <./immagini/etaI_vs_CrystalTemp.png>] [22
+ <./immagini/etaI_vs_CrystalTemp.png>] [19
 
 ]
 \tf@nav=\write6
@@ -1439,31 +1413,32 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31831 strings out of 476091
- 673027 string characters out of 5794081
+ 31847 strings out of 476091
+ 673536 string characters out of 5794081
  1860330 words of memory out of 5000000
- 51526 multiletter control sequences out of 15000+600000
- 571937 words of font info for 71 fonts, out of 8000000 for 9000
+ 51547 multiletter control sequences out of 15000+600000
+ 579969 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,444b,912s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
+ 128i,11n,122p,444b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/publi
 c/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
-6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmsy9.pfb>
-Output written on main.pdf (22 pages, 7357396 bytes).
+fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on main.pdf (19 pages, 7050337 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

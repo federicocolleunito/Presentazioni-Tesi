@@ -85,12 +85,12 @@
 \begin{frame}{Overview}
 	\begin{itemize}
 		\item Tecnologie quantistiche
-		\item LiDAR
+		\item LiDAR (Light Detection And Ranging)
 		\item Spontaneous Parametric Down Conversion
-		\item Quantum Target Detection \& Ranging
+		\item Quantum LiDAR
 		\item Misure Phase-Insensitive
 		\item Setup sperimentale \& Analisi dati
-		\item Passi successivi
+		\item Risultati \& Passi successivi
 	\end{itemize}
 \end{frame}
 
@@ -109,8 +109,8 @@
     \item Quantum computation
     \item Quantum communication
     \item Quantum simulation
-    \item Quantum metrology \& sensing \\
-     \textcolor{red}{$\rightarrow $ imaging}
+    \item Quantum metrology \& \textcolor{red}{sensing} \\
+     
 \end{itemize}
 \column{0.6\textwidth}
 \begin{tikzpicture}
@@ -144,7 +144,7 @@
 % ==============================
 
 \begin{frame}{LiDAR}
-LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
+LIDAR = LIght Detection And Ranging. \\
 \vspace{0.2cm}
 
 {
@@ -156,10 +156,10 @@ LIDAR = LIght Detection And \textcolor{red}{Ranging}. \\
 Performance del protocollo misurata con probabilità di errore $p_{err} $ in
 \begin{itemize}
 	\item \textit{Detection:} target presente o assente
-	\item \textit{Ranging:} in quale time-bin è arrivato il ritorno
+	\item \textit{Ranging:} misura tempo di volo
 \end{itemize}
 \vspace{0.2cm}
-$\rightarrow$ È possibile migliorare il protocollo LiDAR sfruttando correlazioni quantistiche?
+\textbf{Obiettivo:} Migliorare LiDAR con correlazioni quantistiche tra coppie di fotoni.
 
 \end{frame}
 
@@ -167,7 +167,8 @@ $\rightarrow$ È possibile migliorare il protocollo LiDAR sfruttando correlazion
 %==================================
 
 \begin{frame}{SPDC}
-Spontaneous Parametric Down Conversion (SPDC):
+Spontaneous Parametric Down Conversion (SPDC):\\
+1 fotone di pompa $\rightarrow$ 2 fotoni, $signal$ e $idler$.
 
 \begin{tikzpicture}
 	%   (orizzontale,verticale)
@@ -186,8 +187,8 @@ Spontaneous Parametric Down Conversion (SPDC):
 {\includegraphics[width=0.31\textwidth]{immagini/consImpulsoSPDC.png}};
 \end{tikzpicture}
 	
-	
-$[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal$ e $idler$.
+Condizioni di \textbf{Phase Matching}: $\omega_p=\omega_s+\omega_i, \ \vec{k}_p = \vec{k}_s + \vec{k}_i$\\
+Stato entangled $|TMSV \rangle = \sum_{n} c_n^{\mu_s} |n \rangle_s |n \rangle_i $
 
 	
 \end{frame}
@@ -196,8 +197,8 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 
 \begin{frame}{SPDC}
 	
-	SPDC processo poco efficiente $\rightarrow $ Quasi Phase Matching (QPM) :\\
-	cristallo non lineare a poli periodici, $\chi^{(2)}=(-1)^n \chi^{(2)}_0 $.
+	SPDC processo poco efficiente $\rightarrow $ \textbf{Quasi Phase Matching (QPM)}:\\
+	Cristallo non lineare a poli periodici, $\chi^{(2)}=(-1)^n \chi^{(2)}_0 $.
 	\vspace{0.3cm}
 \begin{columns}
 	\column{0.7\textwidth}
@@ -219,7 +220,7 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 	
 	
 
-	
+{\tiny In questo esperimento è stato utilizzato un cristallo $Mg=(5\%):LiNbO_3$ pp su guida d'onda}	
 	
 \end{frame}
 
@@ -229,114 +230,90 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 
 	\begin{columns}[T]
 		\column{0.55\textwidth}
-		Protocollo: \textbf{Quantum Illumination}\\
-		Vantaggio in situazione ostile: 
-		\begin{itemize}
-			\item Probe: stato $\rho_T$, numero medio di fotoni $\mu_0 \ll 1$ (fotoni/bin)
-			\item Background: stato $\rho_B$, numero medio di fotoni $\mu_B \gg 1$
-			\item Target: riflettività $k \ll 1$
-		\end{itemize}
+		Protocollo: \textbf{Quantum Illumination (QI)}\\
+
 				
 		\vspace{0.2cm}
-		Target modellizzato da canale rumoroso e con perdite: $\rho_k=\mathcal{E}_{k,\mu_B}(\rho_T)$\\
+		Target modellizzato da canale rumoroso (Poisson) e con perdite: $\rho_k=\mathcal{E}_{k,\mu_B}(\rho)$\\
 		\vspace{0.2cm}
 		\textcolor{red}{Binary hypothesis testing:}
 		\begin{center}
 			\begin{tikzpicture}
 				\node[draw, inner sep=6pt] {
 					$
-					\mathcal{H}_0:\ \rho_R = \rho_B
-					\qquad\qquad
-					\mathcal{H}_1:\ \rho_R = \rho_k
+					\mathcal{H}_0:\ \rho_R = \rho_B \otimes \rho_i
+					\qquad
+					\mathcal{H}_1:\ \rho_R = \rho_k \otimes \rho_i
 					$
 				};
 			\end{tikzpicture}
 		\end{center}
-		
-		
-		\column{0.55\textwidth}
-		\vspace{0.45cm}
-		\centering
-		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
-		
-	\end{columns}
-	
-\end{frame}
-
-%==========================================
-
-\begin{frame}{Quantum Target Detection (QTD)}
-	\begin{columns}[T]
-		\column{0.55\textwidth}
-		Misura eseguita con stato a multi-copia $\rho_T^{\otimes L}$.\\
+		Misura eseguita con stato a multi-copia $\rho^{\otimes L}$.\\
 		$\mathcal{E}_{k,\mu_B}$ agisce indipendentemente su ogni copia.\\
 		Per $L\to\infty$ vale il \textbf{Quantum Chernoff Bound} (QCB):
 		\begin{equation*}
 			p_{err}(\rho_0^{\otimes L},\rho_1^{\otimes L})
 			\le \frac{1}{2}e^{-\xi_{QCB}L}
 		\end{equation*}
-		Con:
-		\begin{equation*}
-			\begin{aligned}
-				\xi_{QCB}(\mathcal{H}_0,\mathcal{H}_1)
-				&:= \max_{\alpha \in [0,1]} C_\alpha(\rho_0,\rho_1) \\
-				C_\alpha(\rho_0,\rho_1)
-				&:= -\log\!\big(\mathrm{Tr}[\rho_0^{\alpha}\rho_1^{1-\alpha}]\big)
-			\end{aligned}
-		\end{equation*}
-		 $\xi_{QCB}$ = Chernoff information, \\ $C_\alpha$ = $\alpha$-information.
+		
 		\column{0.55\textwidth}
-		\vspace{0.45cm}
+		\vspace{0.15cm}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
+		\vspace{0.3cm}
+		\\
+		
+		{\footnotesize
+		$\xi_{QCB}(\mathcal{H}_0,\mathcal{H}_1):= \max_{\alpha \in [0,1]} C_\alpha(\rho_0,\rho_1)$ \\ 
+		$C_\alpha(\rho_0,\rho_1) := -\log\!\big(\mathrm{Tr}[\rho_0^{\alpha}\rho_1^{1-\alpha}]\big) $
+		}
 	\end{columns}
 	
-
-	
 \end{frame}
-
 
 %==========================================
 
 \begin{frame}{Quantum Target Detection (QTD)}
 	\begin{columns}[T]
 		\column{0.55\textwidth}
-		Con entangled ancilla mode si raggiunge un quantum advantage di \textbf{6 dB}.\\
+		Con QI si raggiunge vantaggio quantistico di \textbf{6 dB}.\\
 		\vspace{0.3cm}
-		Problemi del QTD:
+		Problemi:
 		\begin{itemize}
-			\item 6 dB solo per apparati estremamente complessi
+			\item 6 dB solo per apparati complessi
 			\item storage dell'idler richiede quantum memories
-			\item c'è vantaggio solo per bassi $SNR$
+			\item vantaggio solo in situazione ostile:
+			\begin{itemize}
+				\item  $\mu_s \ll \mu_B$ 
+				\item  $k \ll 1$
+			\end{itemize}
 		\end{itemize}
-		\begin{tcolorbox}[
-			colback=white,
-			colframe=black,
-			boxrule=0.4pt,
-			arc=2pt,
-			left=1pt,
-			right=1pt,
-			top=2pt,
-			bottom=2pt
-			]
-			{\fontsize{5}{2}\selectfont
-				S. Lloyd, Science 321, 1463 (2008)\\
-				Tan et al., Phys. Rev. Lett. 101, 253601 (2008)\\
-				J. Shapiro, IEEE A\&E Systems Magazine 35, 8 (2020)\\
-				Torromé \& Barzanjeh, Prog. Quantum Electron. 93 (2024)\\
-				Sorelli et al., IEEE A\&E Systems Magazine 37 (2021)
-			}
-		\end{tcolorbox}
-	
-	
+		
+				
 		\column{0.55\textwidth}
-		\vspace{0.45cm}
 		\centering
 		\includegraphics[width=1\textwidth]{immagini/DisegninoDetectionPresentazione.png}
+		
 	\end{columns}
-	
 
-	
+		\begin{tcolorbox}[
+		colback=white,
+		colframe=black,
+		boxrule=0.4pt,
+		arc=2pt,
+		left=1pt,
+		right=1pt,
+		top=2pt,
+		bottom=2pt
+		]
+		{\fontsize{5}{2}\selectfont
+			S. Lloyd, Science 321, 1463 (2008) \qquad \hspace{2cm}
+			Tan et al., Phys. Rev. Lett. 101, 253601 (2008)\\
+			J. Shapiro, IEEE A\&E Systems Magazine 35, 8 (2020) \qquad 
+			Torromé \& Barzanjeh, Prog. Quantum Electron. 93 (2024)\\
+			Sorelli et al., IEEE A\&E Systems Magazine 37 (2021)
+		}
+	\end{tcolorbox}
 \end{frame}
 
 %===========================================
@@ -350,7 +327,7 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 		
 		\column{0.5\textwidth}
 		Ranging = stima del tempo di volo.\\
-		Asse dei tempi discretizzato in $m$ slot lunghi $\Delta t$:
+		Asse dei tempi discretizzato in $m$ time-bins lunghi $\Delta t$:
 		
 		\[
 		%\Delta t \ \rightarrow\  m\ \text{time-bin}
@@ -361,7 +338,7 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 		
 		
 		%\textbf{Problema a $m$ ipotesi:}\\
-		il target si trova in uno degli $m$ slot.
+		il target si trova in uno degli $m$ time-bin.
 		
 		\vspace{0.2cm}
 		\textcolor{red}{Multi-hypothesis testing:}
@@ -369,7 +346,7 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 			\begin{tikzpicture}
 				\node[draw, inner sep=6pt] {
 					$
-					\mathcal{H}_j:\ \rho_R = \rho_j
+					\{ \mathcal{H}_0, \mathcal{H}_1, ... , \mathcal{H}_m \}
 					$
 				};
 			\end{tikzpicture}
@@ -380,45 +357,11 @@ $[\hat{n}_s - \hat{n}_i , \widehat{H}] = 0 \rightarrow$ correlazione fra $signal
 	
 	\vspace{0.15cm}
 	
-$\rho_j$ è lo stato con target + rumore.		
+		
 	%	\rho_j := \rho_k^{(j)}\!\!\bigotimes_{i\neq j}^{m-1}\!\rho_B^{(i)}
 \end{frame}
 
 %========================================
-
-\begin{frame}{Quantum Target Ranging (QTR)}
-	
-\begin{columns}
-	
-	\column{0.55\textwidth}
-	\centering
-	\includegraphics[width=1\textwidth]{immagini/DisegninoRangingPresentazione.png}
-	
-	\column{0.5\textwidth}
-	Per $L \gg 1, \ 	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}$
-	\vspace{0.2cm}
-
-	\textbf{Asintoticamente}, QTR diventa problema binario:
-	\begin{equation*}
-		\xi _{QCB}^{(m)}= \min_{i,j}\xi _{QCB}^{(2)}(\mathcal{H}_0,\mathcal{H}_1)
-	\end{equation*}
-	Se $\rho_1 = \rho_k\otimes\rho_B\otimes\cdots \ \text{e} \  \rho_2 = \rho_B\otimes\rho_k\otimes\cdots$, allora
-	\begin{equation*}
-		\xi_{TR} = \max_{\alpha\in[0,1]} C_\alpha(\rho_1,\rho_2)
-		= 2\,C_{1/2}(\rho_k,\rho_B)
-	\end{equation*}
-
-\end{columns}
-\vspace{0.5cm}
-\centering
-$\xi_{TD} := \max_{\alpha \in [0,1]}C_{\alpha}(\rho_B ,\rho_k) \ \rightarrow \ \xi_{TR}\ge \xi_{TD} \ \rightarrow \ \boxed{p_{err}^{TR}\le p_{err}^{TD}}  $
-
-
-
-\end{frame}
-
-%==================================
-
 
 
 \begin{frame}{Misure Phase-Insensitive}
@@ -427,23 +370,25 @@ In regime ottico è difficile e poco pratico preservare la fase.\\
 $\rightarrow$ \textbf{Misura phase-insensitive}: si misura solo il numero di fotoni.\\
 
 \vspace{0.25cm}
-	Caso \textbf{quantistico:} 
-	\[
-	 \rho_Q = \rho_{\mathrm{TMSV}}^{\otimes L} \qquad \rho_{\mathrm{TMSV}} = (| TMSV \rangle \langle TMSV|) \qquad |TMSV \rangle=\sum_{n}c_n^{\mu_0}|n,n\rangle_{s.i}\langle n,n|
-	\]
-	
-	Per lo slot $j$ si ha distribuzione di conteggi:
+
+	Per lo slot $s$ si ha distribuzione di conteggi:
 \[
-P_j(\vec n)=\mathrm{Tr}\!\left[\rho_j\,|\vec n\rangle\langle \vec n|\right],
+P_s(\vec n)=\mathrm{Tr}\!\left[\rho_s\,|\vec n\rangle\langle \vec n|\right],
 \qquad
 |\vec n\rangle=\bigotimes_i |n_i\rangle
 \]
+\[
+\rho_s = \rho_B \otimes \rho_i \ \text{oppure} \ \rho_s = \rho_k \otimes \rho_i
+\]
+
 Si ottiene un set di distribuzioni di probabilità classiche:
 \begin{equation*}
 	\{ \mathit{P}_1(\vec{n}),...,\mathit{P}_m(\vec{n})\}
 \end{equation*}
+
+
+Chernoff Information $\xi_Q $ da probabilità classiche trovata con metodi numerici.
  
-        
 \end{frame}
 
 %==========================================
@@ -454,7 +399,7 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 	\begin{columns}
 		\column{0.5\textwidth}
 		Caso \textbf{classico:} probe è stato coerente.\\
-		Vale $\xi_{\mathrm{coh}} = 2\mu_B + k\mu_0 - 2\sqrt{\mu_B}\sqrt{\mu_B+k\mu_0}$\\
+		Vale $\xi_{\mathrm{coh}} = 2\mu_B + k\mu_s - 2\sqrt{\mu_B}\sqrt{\mu_B+k\mu_s}$\\
 		\vspace{0.2cm}
 		
 		\vspace{0.2cm}
@@ -462,7 +407,7 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 		\[
 		\mathcal{Q}:=\frac{\xi_Q}{\xi_{\mathrm{coh}}}
 		\]
-		Limite empirico: $\mathcal{Q}_{emp} = 1+\frac{1}{\mu_0}$.
+		Limite empirico: $\mathcal{Q}_{emp} = 1+\frac{1}{\mu_s}$.
 		\begin{tcolorbox}[
 			colback=white,
 			colframe=black,
@@ -481,8 +426,7 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 		
 		\column{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{immagini/QvsKappa.png}
-		\includegraphics[width=0.8\textwidth]{immagini/QvsMean.png}
+		\includegraphics[width=1.1\textwidth]{immagini/QvsMean.png}
 	\end{columns}
 	
 	
@@ -491,25 +435,8 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 
 %============================================
 
-\begin{frame}{Setup sperimentale}
-	\textbf{Classico}
-\begin{tikzpicture}
-	%   (orizzontale,verticale)
-	%   +: destra, alto       -: sinistra, basso
-	% ogni nodo si trova più avanti rispetto a quelli precedenti
-	\node (A) at (0,0.5)
-	{\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}};
-	
-	
-\end{tikzpicture}
-	\vspace{0.25cm}
-	{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon Detector}
-\end{frame}
-
-%==========================================
 
 \begin{frame}{Setup sperimentale}
-\textbf{Quantistico}
 \begin{tikzpicture}[baseline=(A.north)]
 	\node (A) at (0,1.5) {\includegraphics[width=\textwidth]{immagini/SchemaSetupQuantistico.png}};
 	\pause
@@ -519,7 +446,7 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 \end{tikzpicture}
 
 \vspace{0.25cm}
-{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon Detector}
+{\tiny BS: Beam Splitter,   VA: Variable Attenuator.   NLC: Non Linear Crystal,   CWDM: Coarse Wavelength Division Multiplexing,   DM: Dichroic Mirror,   SNSPD: Superconducting Nanowire Single Photon Detector}
 
 \end{frame}
 
@@ -540,11 +467,11 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 		arrow/.style={-{Stealth[length=2.2mm]}, line width=0.6pt},
 		]
 		
-		\node[box] (snspd) {SNSPD\\rileva fotone};
+		\node[box] (snspd) {SNSPD};
 		\node[box, right=18mm of snspd] (tt)
-		{TimeTagger\\segna conteggio\\time-bin:\\$\Delta t = 800\,\mathrm{ps}$};
+		{TimeTagger\\time-bin:\\$\Delta t = 800\,\mathrm{ps}$};
 		\node[box, right=18mm of tt] (strings)
-		{Creazione\\stringhe\\di conteggi};
+		{Stringhe\\di conteggi};
 		
 		\draw[arrow] (snspd) -- (tt);
 		\draw[arrow] (tt) -- (strings);
@@ -560,8 +487,8 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 }
 	\vspace{0.3cm}
 	
-	Si calcola coefficiente di Pearson $ C_P = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$ shiftando le stringhe per trovare il picco.
-	
+	Si calcola $ C_P = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$ shiftando le stringhe per trovare picco di correlazione.\\
+	Posizione individuata: distanza fra $signal$ e $idler$.
 \end{frame}
 
 
@@ -571,8 +498,8 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 
 \begin{frame}{Analisi dati}
 	
-	Picco inizialmente individuato in assenza di rumore.\\
-	La posizione individuata è la differenza di tempo fra $signal$ e $idler$.\\
+	Picco di correlazione inizialmente individuato in assenza di rumore.\\
+	
 	
 	\begin{columns}
 		
@@ -581,21 +508,21 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 		\centering
 		\includegraphics[width=\textwidth]{immagini/piccoSenzaNoise.png}
 		
-		{\footnotesize $\mu_B \sim 10^{-9}$}
+		{\footnotesize $\mu_B \sim 10^{-9}$ (fotoni/bin)}
 		
 		% --- Seconda immagine
 		\column{0.33\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{immagini/piccoConNoise.png}
 		
-		{\footnotesize $\mu_B \sim 10^{-6}$}
+		{\footnotesize $\mu_B \sim 10^{-6}$ (fotoni/bin)}
 		
 		% --- Terza immagine
 		\column{0.33\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{immagini/piccoConTantoNoise.png}
 		
-		{\footnotesize $\mu_B \sim 10^{-4}$}
+		{\footnotesize $\mu_B \sim 10^{-4}$ (fotoni/bin)}
 		
 	\end{columns}
 	
@@ -617,7 +544,7 @@ Si ottiene un set di distribuzioni di probabilità classiche:
 Si è studiato l'andamento (protocollo quantistico) di $p_{err,\mathrm{exp}}$ e di $\xi_{TR}$ con $\mu_B$.\\
 Parametri:
 \[
-\mu = (9.83 \pm 7)\cdot 10^{-5} \qquad \kappa = (1.74 \pm 0.05)\cdot 10^{-4} \qquad \eta_{idler} = (9.4 \pm 4)\cdot 10^{-4}
+\mu_s = (9.83 \pm 7)\cdot 10^{-5} \qquad \kappa = (1.74 \pm 0.05)\cdot 10^{-4} \qquad \eta_{idler} = (9.4 \pm 4)\cdot 10^{-4}
 \]
 	\begin{columns}
 		\column{0.5\textwidth}
@@ -628,7 +555,8 @@ Parametri:
 	\end{columns}
 \vspace{0.2cm}
 
-Differenza risultato sperimentale - teoria dovuta a ...
+Risultati preliminari sono comparabili a valori teorici.\\
+Differenza (probabilmente) dovuta a instabilità dei parametri nel tempo.
 
 \end{frame}
 
@@ -649,7 +577,7 @@ Differenza risultato sperimentale - teoria dovuta a ...
 		Zona esplorata presenta $\mathcal{Q} \simeq 1$:
 		\begin{itemize}
 			\item $\eta_{idler} \ll 1 $
-			\item $\mu \ \text{e} \ \mu_B $ mantenuti bassi per non surriscaldare gli SNSPD
+			\item $\mu_s \ \text{e} \ \mu_B $ mantenuti bassi per non surriscaldare gli SNSPD
 		\end{itemize}
 		
 		\column{0.5\textwidth}
@@ -694,9 +622,8 @@ Differenza risultato sperimentale - teoria dovuta a ...
 	\column{0.5\textwidth}
 	\begin{itemize}
 		\item Aumentare $\eta_{idler}$: controllo accoppiamento fibre ed efficienza SNSPD
-		\item Studio teorico a bassi $\mu \ \text{e} \ \mu_B$ per trovare zone ad alto $\mathcal{Q}$
+		\item Studio teorico a bassi $\mu_s \ \text{e} \ \mu_B$ per trovare zone ad alto $\mathcal{Q}$
 		\item Misure su protocolli classico e quantistico e confronto
-		\item Covert sensing?
 	\end{itemize}
 
 	\column{0.5\textwidth}
@@ -932,6 +859,56 @@ Dove  $\vec{P} = \vec{P} ^L + \vec{P} ^{NL}$ e  $  \vec{P}^{NL}_i = \epsilon _0 
 	}
 	\vspace{0.25cm}
 	%{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon detector}
+\end{frame}
+
+%==========================================
+\begin{frame}{Quantum Target Ranging (QTR)}
+	
+	\begin{columns}
+		
+		\column{0.55\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{immagini/DisegninoRangingPresentazione.png}
+		
+		\column{0.5\textwidth}
+		Per $L \gg 1, \ 	p_{\mathrm{err}} \propto e^{-\xi^{(m)} L}$
+		\vspace{0.2cm}
+		
+		\textbf{Asintoticamente}, QTR diventa problema binario:
+		\begin{equation*}
+			\xi _{QCB}^{(m)}= \min_{i,j}\xi _{QCB}^{(2)}(\mathcal{H}_i,\mathcal{H}_j)
+		\end{equation*}
+		Posso scegliere due stati arbitrari $\rho_1 = \rho_k\otimes\rho_B\otimes\cdots \ \text{e} \  \rho_2 = \rho_B\otimes\rho_k\otimes\cdots$, allora
+		\begin{equation*}
+			\xi_{TR} = 2\,C_{1/2}(\rho_k,\rho_B) \ge \xi_{TD}
+		\end{equation*}
+		\hspace{3.2cm}  $\downarrow$
+		\begin{equation*}
+			\boxed{p_{err}^{TR}\le p_{err}^{TD}}
+		\end{equation*}
+	\end{columns}
+	%\vspace{0.4cm}
+	%\centering
+	%$\xi_{TD} := \max_{\alpha \in [0,1]}C_{\alpha}(\rho_B ,\rho_k) \ \rightarrow \ \xi_{TR} \ \rightarrow \   = \max_{\alpha\in[0,1]} C_\alpha(\rho_1,\rho_2) $
+	
+	
+	
+\end{frame}
+
+%==================================
+\begin{frame}{Setup sperimentale}
+	\textbf{Classico}
+	\begin{tikzpicture}
+		%   (orizzontale,verticale)
+		%   +: destra, alto       -: sinistra, basso
+		% ogni nodo si trova più avanti rispetto a quelli precedenti
+		\node (A) at (0,0.5)
+		{\includegraphics[width=1\textwidth]{immagini/SchemaSetupClassico.png}};
+		
+		
+	\end{tikzpicture}
+	\vspace{0.25cm}
+	{\tiny BS: Beam Splitter   VA: Variable Attenuator   NLC: Non Linear Crystal   CWDM: Coarse Wavelength Division Multiplexing   DM: Dichroic Mirror   SNSPD: Superconducting Nanowire Single Photon Detector}
 \end{frame}
 
 %==========================================
